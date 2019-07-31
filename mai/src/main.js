@@ -8,6 +8,8 @@ import router from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
+import store from './vuex/store'
+
 //引入axios
 import axios from 'axios'
 //挂载在Vue的原型上。
@@ -16,10 +18,11 @@ Vue.prototype.axios = axios
 Vue.config.productionTip = false
 //注册elementui
 Vue.use(ElementUI);
-/* eslint-disable no-new */
+/* eslint-disable no-new   挂载在vue*/
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
