@@ -66,11 +66,14 @@ export default {
             })
             .then(response => {
               if (response.data.length) {
+
                 console.log("接收后端响应请求的数据：", response.data[0]);
+
                 that.$message({
                   message: "恭喜你，登录成功",
                   type: "success"
                 });
+
                
               //将数据存入state
               that.$store.commit('SAVE_USERINFO',response.data[0])
@@ -79,6 +82,7 @@ export default {
 
               } else {
                 that.$message.error("检查用户名和密码");
+
               }
             });
         } else {

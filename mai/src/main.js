@@ -12,6 +12,9 @@ import store from './vuex/store'
 
 //引入axios
 import axios from 'axios'
+
+
+
 //挂载在Vue的原型上。
 Vue.prototype.axios = axios
 
